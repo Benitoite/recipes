@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Food Recipes</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
-  <style>
-        .footer {
-      margin-top: 60px;
-      padding: 20px 0;
-      border-top: 1px solid #ddd;
-      text-align: center;
-      font-style: italic;
-      color: #555;
-      background: linear-gradient(to right, #fdfcfb, #f5f5f5);
-      border-radius: 0 0 8px 8px;
-    }
 
-    .footer p {
-      margin: 0;
-      font-size: 1.1em;
-      letter-spacing: 1px;
-    }
+  <style>
+    /* Animated Gradient Background */
     body {
       font-family: 'Open Sans', sans-serif;
-      background: #fdfcfb;
-      color: #333;
       margin: 0;
       padding: 0;
       line-height: 1.6;
+      background: linear-gradient(-45deg, #3498db, #8e44ad, #e74c3c, #0e44ad, #3498db);
+      background-size: 400% 400%;
+      animation: gradientShift 25s ease infinite;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
     }
 
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      25% { background-position: 50% 50%; }
+      50% { background-position: 100% 50%; }
+      75% { background-position: 50% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Content Panel */
     .container {
+      background: rgba(255, 255, 255, 0.95);
       max-width: 800px;
       margin: 50px auto;
-      padding: 20px;
-      background: #ffffff;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      width: 90%;
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: 3em;
-      margin-bottom: 10px;
       text-align: center;
+      margin-bottom: 20px;
       color: #c0392b;
     }
 
@@ -53,6 +54,7 @@
       padding-bottom: 5px;
       margin-top: 40px;
       font-size: 2em;
+      color: #2c3e50;
     }
 
     h3 a {
@@ -74,11 +76,38 @@
 
     hr {
       border: none;
-      border-top: 1px solid #eee;
+      border-top: 1px solid #ddd;
       margin: 30px 0;
+    }
+
+    .footer {
+      margin-top: 60px;
+      padding: 20px 0;
+      border-top: 1px solid #ddd;
+      text-align: center;
+      font-style: italic;
+      color: #555;
+      background: linear-gradient(to right, #fdfcfb, #f5f5f5);
+      border-radius: 0 0 8px 8px;
+    }
+
+    .footer p {
+      margin: 0;
+      font-size: 1.1em;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2em;
+      }
+      .container {
+        padding: 20px;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <h1>Food Recipes</h1>
@@ -86,16 +115,17 @@
     <h2>Savory Dishes</h2>
     <h3><a href="Tomato_Pie.pdf">Tomato Pie</a></h3>
     <h4>Parade Magazine, August 1990</h4>
-    
+
     <h3><a href="salsa.pdf">Salsa</a></h3>
     <h4>Consumer Reports (1996)</h4>
-    
-    <hr>
+
+    <hr />
 
     <h2>Cookies</h2>
     <h3><a href="mrsfieldscookies.pdf">Mrs. Field's Cookies</a></h3>
     <h4>1987 chain letter recipe</h4>
- <footer class="footer">
+
+    <footer class="footer">
       <p>Morgan Hill, CA</p>
     </footer>
   </div>
